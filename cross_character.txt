@@ -1,0 +1,92 @@
+public class CrossCharacter {
+    
+    public static void main(String args[])
+    {
+        String a = "GEEKS";
+        
+        char[] b = a.toCharArray();
+        
+        int space1 = -1;
+        int space2 = b.length - 1;
+        int temp1 = b.length - 1;
+        int temp2 = 0;
+        int flag1 = 0;
+        
+        
+        for(int i = 0; i < a.length(); i++)
+        {
+            if(flag1 == 0){
+               space1++;
+                for(int j = 0; j < space1; j++)
+                {
+                    System.out.print(" ");
+                }
+                 
+                System.out.print(b[i]);
+            
+                int temp = i;
+            
+                
+                if(i < temp1)
+                {
+                    temp++;
+                    while(temp != space2)
+                    {
+                        System.out.print(" ");
+                        temp++;
+                    }
+                    System.out.print(b[temp1]+"\n");
+                    temp1--;
+                    temp2 = space2;
+                    space2 -= 1;
+                }
+                if(i == temp1)
+                {
+                    flag1 = 1;
+                    temp1--;
+                    
+                    System.out.println();
+                
+                }
+            }
+            
+            else if(flag1 == 1 )
+            {
+                space1--;
+                for(int j = 0; j < space1; j++)
+                {
+                    System.out.print(" ");
+                }
+                int v = space1;
+                System.out.print(b[temp1]);
+                temp1--;
+                
+                
+                v++;
+                while(temp2 != v)
+                {
+                    System.out.print(" ");
+                    v++;
+                }
+                
+                System.out.print(b[i]+"\n");
+                temp2 += 1;
+                
+                /*int x = 0;
+                int temp2 = space1 - 1;
+                while(temp2 != x)
+                {
+                    System.out.print(" ");
+                    x++;
+                }
+                System.out.print(b[temp1]);
+                temp1--;
+                //break;*/
+            }
+        }
+        
+        System.out.println();
+    }
+    
+}
+
