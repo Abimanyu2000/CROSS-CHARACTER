@@ -72,16 +72,7 @@ public class CrossCharacter {
                 System.out.print(b[i]+"\n");
                 temp2 += 1;
                 
-                /*int x = 0;
-                int temp2 = space1 - 1;
-                while(temp2 != x)
-                {
-                    System.out.print(" ");
-                    x++;
-                }
-                System.out.print(b[temp1]);
-                temp1--;
-                //break;*/
+                
             }
         }
         
